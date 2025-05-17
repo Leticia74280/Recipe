@@ -12,7 +12,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url('./flat-lay-delicious-fruits-muffins.jpg');
+    background: url('/src/images/flat-lay-delicious-fruits-muffins.jpg');
     background-size: cover;
     background-position: center;
 
