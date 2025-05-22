@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styyle.css">
+</head>
+<body>
+    <!-- montar uma tela de galeria -->
+     <header>
+        <nav class="menu-topo">
+            <a href="" class="link">Home</a>
+            <a href="" class="link">Galeria</a>
+            <a href="" class="link">Contate-nos</a>
+        </nav>
+        <input type="button" value="mode" id="btn-mode" onclick="mode()">
+     </header>
+     <main>
+        <section class="galeria-container">
+            <div class="card">
+                <img src="paisagem1.jpg" alt="" class="imagem">
+                <h2 class="titulo">titulo</h2>
+                <p class="descricao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem vitae saepe omnis delectus vero dolorum nostrum consequatur eos esse laborum culpa blanditiis porro eius, eaque, ex inventore aperiam fugit placeat.</p>
+            </div>
+            <div class="card">
+                <img src="paisagem1.jpg" alt="" class="imagem">
+                <h2 class="titulo">titulo</h2>
+                <p class="descricao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem vitae saepe omnis delectus vero dolorum nostrum consequatur eos esse laborum culpa blanditiis porro eius, eaque, ex inventore aperiam fugit placeat.</p>
+            </div>
+            <div class="card">
+                <img src="paisagem1.jpg" alt="" class="imagem">
+                <h2 class="titulo">titulo</h2>
+                <p class="descricao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem vitae saepe omnis delectus vero dolorum nostrum consequatur eos esse laborum culpa blanditiis porro eius, eaque, ex inventore aperiam fugit placeat.</p>
+            </div>
+        </section>
+        <section class="carousel-container">
+            <figure>
+                <img src="paisagem1.jpg" alt="" id="carousel" onmouseenter="mudaImagem()">
+            </figure>
+        </section>
+     </main>
+     <footer>
+        <p>propriedade bla bla bla</p>
+        <p id="relogio">relógio vai ficar aqui...</p>
+     </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+.container {
+    margin: 0 auto;
+    width: 960px;
+/*width define o espaço que aquele objeto ocupará na largura*/
+}
+
+h1 a {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+    margin: 70px;
+    width: 1000px;
+    text-decoration: none;
+    color: #7e9f19;
+}
+
+h1 a:hover{
+    background-color: #7e9f19;
+    color: #FFF;
+}
+
+.textodesc{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.link{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+.link a{
+    color: #2c88a7;
+    font-weight: bold;
+}
+
+.MoreInternal {
+    border-color: #CCC #999 #999 #CCC;
+    border: 1px solid #CCC;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #FFF;
+
+}
+
+.MoreInternal h2{
+    border-bottom: 1px dashed rgb(101, 201, 171);
+    margin: 0;
+}
+
+.MoreInternal img {
+    border: 1px solid #7e9f19;
+    float: left;
+    margin: 10px 10px 0 0;
+    padding: 2px;
+    width: 156px;
+    height: 156px;
+}
+
+h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(101, 201, 171);
+}
+
+body {
+    background: #fff1d6;
+   
+}
+
+span{
+    font-style: italic;
+    color: #2c88a7;
+    font-weight: bolder;
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRUD com LocalStorage</title>
+  <style>
+    body { font-family: Arial; margin: 20px; background-color: #f0f2f5; }
+    h2 { text-align: center; }
+    form { max-width: 400px; margin: 0 auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px #ccc; }
+    input { width: 100%; padding: 8px; margin: 5px 0; border-radius: 5px; border: 1px solid #ccc; }
+    button { padding: 10px 20px; margin-top: 10px; border: none; background: #3498db; color: white; border-radius: 5px; cursor: pointer; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    th, td { border: 1px solid #ddd; padding: 10px; text-align: center; }
+    tr:nth-child(even) { background-color: #f9f9f9; }
+    .actions a { margin: 0 5px; cursor: pointer; color: #2980b9; }
+  </style>
+</head>
+<body>
+
+  <h2>Cadastro de Usuários (com LocalStorage)</h2>
+  <form id="userForm">
+    <input type="text" id="login" placeholder="Login" required />
+    <input type="email" id="email" placeholder="Email" required />
+    <input type="password" id="senha" placeholder="Senha" required />
+    <button type="submit">Salvar</button>
+    <button type="button" onclick="limparForm()">Limpar</button>
+  </form>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Login</th>
+        <th>Email</th>
+        <th>Senha</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody id="userTable"></tbody>
+  </table>
+
+  <script>
+    let users = JSON.parse(localStorage.getItem("usuarios")) || [];
+    let editIndex = null;
+
+    function salvarDados() {
+      localStorage.setItem("usuarios", JSON.stringify(users));
+    }
+
+    function renderTable() {
+      const table = document.getElementById("userTable");
+      table.innerHTML = "";
+      users.forEach((user, index) => {
+        const row = `<tr>
+          <td>${user.login}</td>
+          <td>${user.email}</td>
+          <td>${user.senha}</td>
+          <td class="actions">
+            <a onclick="editarUsuario(${index})">Editar</a>
+            <a onclick="deletarUsuario(${index})">Excluir</a>
+          </td>
+        </tr>`;
+        table.innerHTML += row;
+      });
+    }
+
+    document.getElementById("userForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const login = document.getElementById("login").value;
+      const email = document.getElementById("email").value;
+      const senha = document.getElementById("senha").value;
+
+      const novoUsuario = { login, email, senha };
+
+      if (editIndex === null) {
+        users.push(novoUsuario);
+      } else {
+        users[editIndex] = novoUsuario;
+        editIndex = null;
+      }
+
+      salvarDados();
+      renderTable();
+      limparForm();
+    });
+
+    function editarUsuario(index) {
+      const user = users[index];
+      document.getElementById("login").value = user.login;
+      document.getElementById("email").value = user.email;
+      document.getElementById("senha").value = user.senha;
+      editIndex = index;
+    }
+
+    function deletarUsuario(index) {
+      if (confirm("Deseja realmente excluir este usuário?")) {
+        users.splice(index, 1);
+        salvarDados();
+        renderTable();
+        limparForm();
+      }
+    }
+
+    function limparForm() {
+      document.getElementById("login").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("senha").value = "";
+      editIndex = null;
+    }
+
+    // Inicialização
+    renderTable();
+  </script>
+</body>
+</html>

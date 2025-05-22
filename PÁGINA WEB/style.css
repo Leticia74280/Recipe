@@ -1,0 +1,8 @@
+h1 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-top: 1px solid red; /* borda vermelha em cima */
+    border-right: 1px solid blue; /* borda azul à direita */
+    border-bottom: 1px solid black; /* borda preta embaixo */
+    border-left: 1px solid red; /* borda vermelha à esquerda */
+}
+

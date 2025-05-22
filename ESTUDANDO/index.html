@@ -1,0 +1,40 @@
+!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>CRUD de Usuários</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    table, th, td { border: 1px solid black; border-collapse: collapse; padding: 8px; }
+    input { margin: 5px; padding: 5px; }
+    button { margin: 5px; padding: 5px 10px; }
+  </style>
+</head>
+<body>
+  <h2>Gerenciamento de Usuários (CRUD)</h2>
+
+  <form id="userForm">
+    <input type="text" id="login" placeholder="Login" required />
+    <input type="email" id="email" placeholder="Email" required />
+    <input type="password" id="senha" placeholder="Senha" required />
+    <button type="submit">Salvar</button>
+    <button type="button" onclick="resetForm()">Limpar</button>
+  </form>
+
+  <h3>Usuários</h3>
+  <table id="userTable">
+    <thead>
+      <tr>
+        <th>Login</th>
+        <th>Email</th>
+        <th>Senha</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+  <button onclick="clearAll()">Excluir Todos</button>
+
+<script src="script.js"></script>
+</body>
+</html>
