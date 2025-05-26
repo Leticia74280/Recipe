@@ -7,43 +7,40 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="../styles/telaCadastro.css">
+        <link rel="stylesheet" href="/src/styles/telaCadastro.css">
     <title>Receitas</title>
 </head>
 
 <body>
-      
-
-    <main class="container">
-        <form>
-
-            <h1> Cadastro </h1>
-
-            <div class="input-box">
-
-                <input placeholder="Nome" type="text" id="nome">
-                <i class="fa-duotone fa-solid fa-user"></i>
-            </div>
-
-            <div class="input-box">
-
-                <input placeholder="E-mail" type="text" id="e-mail">
-                <i class="fa-solid fa-envelope"></i>
-            </div>
-
-            <div class="input-box">
-
-                <input placeholder="Senha" type="password" id="senha">
-                <i class="fa-duotone fa-solid fa-lock"></i>
-            </div>
-            
-
-            <button type="submit" class="cadastro" onclick="telaCadastro()">Cadastre-se</button>
-            
 
 
-        </form>
-    </main>
+  <main class="container">
+    <form onsubmit="telaCadastro(event)">
+        <h1>Cadastro</h1>
+
+        <div class="input-box">
+            <input placeholder="Nome" type="text" id="nome">
+            <i class="fa-duotone fa-solid fa-user"></i>
+        </div>
+
+        <div class="input-box">
+            <input placeholder="E-mail" type="text" id="e-mail">
+            <i class="fa-solid fa-envelope"></i>
+        </div>
+
+        <div class="input-box">
+            <input placeholder="Senha" type="password" id="senha">
+            <i class="fa-duotone fa-solid fa-lock"></i>
+        </div>
+
+        <button type="submit" class="cadastro">Cadastre-se</button>
+    </form>
+
+    <div id="listaUsuarios"></div>
+</main>
+
+ 
+
 
     <script src="../javascript/script.js"></script>
 </body>
