@@ -79,6 +79,60 @@ body {
   color: black;
 }
 
+.form-input-default {
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+.form-input-default label {
+  color: black;
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+label {
+  cursor: default;
+}
+
+.form-input-default input {
+  background: white;
+  border: 1px solid transparent;
+  border-radius: 2.4rem;
+  color: #4a4a4adb;
+  font-size: 1.2rem;
+  font-weight: 400;
+  height: 5rem;
+  padding: 0 2.5rem;
+  width: 100%;
+}
+
+.page-profile .button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2.7rem;
+  margin-top: 1rem;
+}
+
+.page-profile .button-wrapper button {
+  width: 7.4rem;
+}
+
+.button-default {
+  align-items: center;
+  border-radius: 5rem;
+  display: inline-flex;
+  font-size: 1.4rem;
+  font-weight: 700;
+  height: 4rem;
+  justify-content: center;
+  padding: 0 1.5rem;
+  background-color: #e67e22;
+  color: black;
+}
+
 .section-title {
   font-size: 1.5em;
   margin: 20px 0 10px;
