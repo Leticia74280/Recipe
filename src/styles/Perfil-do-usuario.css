@@ -9,6 +9,11 @@ body {
   background-color: #fffaf5;
   color: #333;
   padding: 20px;
+  /*background-image: url(/src/images/flat-lay-delicious-fruits-muffins.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;*/
 }
 
 .profile-container {
@@ -76,7 +81,13 @@ body {
   display: flex;
   gap: 20px;
   font-size: 0.95em;
-  color: black;
+  color: rgb(0, 0, 0);
+
+}
+.stats a {
+  text-decoration: none;
+  color: #000;
+
 }
 
 .form-input-default {
