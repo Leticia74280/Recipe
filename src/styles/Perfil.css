@@ -77,6 +77,20 @@ body {
   color: #666;
 }
 
+#bio-input {
+  margin-bottom: 1.5rem;
+  width: 100%;
+  background: white;
+  border: 1px solid transparent;
+  border-radius: none;
+  color: #4a4a4adb;
+  font-size: 1.2rem;
+  font-weight: 400;
+  height: 3.5rem;
+  padding: 0 2.5rem;
+  width: 62.5%;
+}
+
 .stats {
   display: flex;
   gap: 20px;
@@ -115,9 +129,9 @@ label {
   color: #4a4a4adb;
   font-size: 1.2rem;
   font-weight: 400;
-  height: 5rem;
+  height: 4.5rem;
   padding: 0 2.5rem;
-  width: 100%;
+  width: 98%;
 }
 
 .page-profile .button-wrapper {
@@ -133,11 +147,11 @@ label {
 
 .button-default {
   align-items: center;
-  border-radius: 5rem;
+  border-radius: 4rem;
   display: inline-flex;
   font-size: 1.4rem;
   font-weight: 700;
-  height: 4rem;
+  height: 3rem;
   justify-content: center;
   padding: 0 1.5rem;
   background-color: #e67e22;
