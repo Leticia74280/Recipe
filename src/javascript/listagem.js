@@ -60,3 +60,18 @@ function aplicarFiltro() {
 filtro.addEventListener("input", aplicarFiltro);
 
 renderTabela(receitas);
+
+ function adicionarReceita() {
+    const nome = prompt("nova receita:");
+  
+    if (nome && nome.trim() !== "") {
+      const novaReceita = {
+        id: receitas.length > 0 ? receitas[receitas.length - 1].id + 1 : 1,
+        nome: nome.trim()
+      };
+      receitas.push(novaReceita);
+      aplicarFiltro();
+    }
+  }
+  
+document.getElementById("adicionar-receita").addEventListener("click", adicionarReceita);

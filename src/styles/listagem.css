@@ -59,11 +59,25 @@ button {
 }
 
 button.editar {
-  background-color: #724caf;
+  background-color: #5800e6;
   color: white;
 }
 
 button.excluir {
-  background-color: #f44336;
+  background-color: #9b0c01;
   color: white;
+}
+
+#adicionar-receita {
+  margin: 10px 0;
+  padding: 8px 16px;
+  background-color: #4d1bc2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#adicionar-receita:hover {
+  background-color: #a10087;
 }
