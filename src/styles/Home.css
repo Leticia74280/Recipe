@@ -106,6 +106,51 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     text-align: center;
+    position: relative;
+    transition: transform 0.3 ease;
+    cursor: pointer;
+}
+
+.recipe-card:hover {
+    transform: scale(1.03);
+}
+
+.recipe-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 250, 245, 0.95);
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    overflow-y: auto;
+    font-size: 0.9rem;
+}
+
+.recipe-card:hover .recipe-info {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.recipe-info h4 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: #d35400;
+}
+
+.recipe-info h5 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: #e67e22;
+}
+
+.recipe-info ul {
+    padding-left: 20px;
+    margin-bottom: 10px;
 }
 
 .recipe-card img {
