@@ -7,13 +7,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="shortcut icon" href="../images/Logo-Site_de_Receitas.png" type="image/x-icon">
         <link rel="stylesheet" href="../styles/styles.css">
-    <title>Login</title>
+    <title>Receitas</title>
 </head>
 
 <body>
-      
+
 
     <main class="container">
         <form>
@@ -31,17 +30,9 @@
                 <input placeholder="Senha" type="password" id="senha">
                 <i class="fa-duotone fa-solid fa-lock"></i>
             </div>
-            <div class="remember-forgot">
-                <label>
-                    <input type="checkbox">
 
-                    Lembrar senha
-                </label>
-                <a href="#">Esqueci senha</a>
-            </div>
-            <br>
 
-            <button type="submit" class="login" onclick="salvarlogin()">Login</button>
+            <button type="submit" class="login" onclick="salvarlogin(event)">Login</button>
 
 <div class="register-link">
     <p>Não tem uma conta? <a href="../pages/telaCadastro.html">Cadastre-se</a></p>
@@ -50,5 +41,7 @@
         </form>
     </main>
 
+    <script src="../javascript/script.js"></script>
 </body>
+
 </html>
