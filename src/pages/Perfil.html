@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perfil</title>
+  <link rel="shortcut icon" href="/src/images/Logo-Site_de_Receitas.png" type="image/x-icon">
+  <link rel="stylesheet" href="/src/styles/Perfil.css" />
+</head>
+
+<body>  
+  <div class="profile-container">
+    <div class="profile-header">
+     <div class="profile-pic-wrapper">
+      <img src="/src/images/Foto-de-usuario.png" alt="Foto de Perfil" class="profile-pic" />
+      <div class="edit-profile-btn">
+        <img src="/src/images/Editar-Foto-de-Perfil-Icon.png" alt="Editar Perfil" />
+      </div>
+      <input type="file" id="profilePicInput" accept="image/*" style="display: none;">
+     </div>
+      <div class="profile-info">
+        <h1 class="username">Guest</h1>
+        <p class="bio">
+         <input id="bio-input" placeholder="Insira sua bio" />
+        </p>
+        <div class="stats">
+          <div><strong>9</strong> Receitas</div>
+          <div><strong><a href="/src/pages/Home.html">Home</a></strong></div>
+          <div><strong><a href="/src/pages/Perfil.html">Perfil</a></strong></div>
+          <div><strong><a href="/src/pages/listagem.html">Lista de Receitas</a></strong></div>
+          <div><strong><a href="/src/pages/index.html">Login</a></strong></div>
+          <div><strong><a href="/src/pages/telaCadastro.html">Cadastro</a></strong></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-three">
+      <div class="form-input-default">
+        <label for="first-name">Nome:</label>
+        <input id="first-name" autocomplete="given-name" name="first_name" placeholder="Insira seu nome" required type="text">
+      </div>
+      <div class="form-input-default">
+        <label for="last_name">Sobrenome:</label>
+        <input id="last_name" autocomplete="family-name" name="last_name" placeholder="Insira seu sobrenome" required type="text">
+      </div>
+      <div class="form-input-default">
+        <label for="nickname">Nome de Usuário:</label>
+        <input id="nickname" autocomplete="nickname" name="nickname" placeholder="Insira seu nome de usuário" required type="text">
+      </div>
+      <div class="form-input-default">
+        <label for="email">Email:</label>
+        <input id="email" autocomplete="email" name="email" placeholder="Insira seu email" required type="email">
+      </div>
+    <div class="grid-three phone">
+      <div class="form-input-default">
+        <label for="phone">Telefone:</label>
+        <input id="phone" class="maskPhone" name="phone" placeholder="(__) _____-____" required type="text" maxlength="19">
+      </div>
+      <div class="ajax-message"></div>
+      <div class="button-wrapper">
+        <button ajax-form ajax-loading class="button-default" type="submit">Salvar</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>&copy; 2025 Developed by Receitas Deliciosas. Todos os direitos reservados.</p>
+  </footer>
+  <script src="/src/javascript/Perfil.js"></script>
+</body>
+</html>
