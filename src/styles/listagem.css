@@ -7,7 +7,7 @@
 
 body {
   font-family: Arial, sans-serif;
-  background: url(/src/images/flat-lay-delicious-fruits-muffins.jpg) no-repeat center center fixed;
+  background: url(../images/flat-lay-delicious-fruits-muffins.jpg) no-repeat center center fixed;
   background-size: cover; /* Garante que a imagem de fundo cubra todo o body */
   padding: 20px;
   margin: 0;
