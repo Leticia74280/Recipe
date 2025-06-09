@@ -1,16 +1,12 @@
-let receitas = [
-  { id: 1, nome: "Bolo de Chocolate" },
-  { id: 2, nome: "Torta de Frango" },
-  { id: 3, nome: "Macarrão à Bolonhesa" },
-  { id: 4, nome: "Panqueca Recheada" },
-  { id: 5, nome: "Bolo de Chocolate" },
-  { id: 6, nome: "Torta de Frango" },
-  { id: 7, nome: "Macarrão à Bolonhesa" },
-  { id: 8, nome: "Panqueca Recheada" }
-];
-
 const tabela = document.getElementById("tabela-receitas");
 const filtro = document.getElementById("filtro");
+const btnAdicionar = document.getElementById("adicionar-receita");
+
+let receitas = JSON.parse(localStorage.getItem("receitas")) || [];
+
+function salvarNoLocalStorage() {
+  localStorage.setItem("receitas", JSON.stringify(receitas));
+}
 
 function renderTabela(lista) {
   tabela.innerHTML = "";
@@ -40,6 +36,7 @@ function editar(index) {
   const novaReceita = prompt("Editar nome da receita:", receitas[index].nome);
   if (novaReceita && novaReceita.trim() !== "") {
     receitas[index].nome = novaReceita.trim();
+    salvarNoLocalStorage();
     aplicarFiltro();
   }
 }
@@ -47,6 +44,7 @@ function editar(index) {
 function excluir(index) {
   if (confirm("Deseja excluir esta receita?")) {
     receitas.splice(index, 1);
+    salvarNoLocalStorage();
     aplicarFiltro();
   }
 }
@@ -57,21 +55,25 @@ function aplicarFiltro() {
   renderTabela(receitasFiltradas);
 }
 
-filtro.addEventListener("input", aplicarFiltro);
-
-renderTabela(receitas);
-
- function adicionarReceita() {
-    const nome = prompt("nova receita:");
-  
-    if (nome && nome.trim() !== "") {
-      const novaReceita = {
-        id: receitas.length > 0 ? receitas[receitas.length - 1].id + 1 : 1,
-        nome: nome.trim()
-      };
-      receitas.push(novaReceita);
-      aplicarFiltro();
-    }
+function adicionarReceita() {
+  const nome = prompt("Nova receita:");
+  if (nome && nome.trim() !== "") {
+    const novoId = receitas.length > 0 ? Math.max(...receitas.map(r => r.id)) + 1 : 1;
+    const novaReceita = {
+      id: novoId,
+      nome: nome.trim()
+    };
+    receitas.push(novaReceita);
+    salvarNoLocalStorage();
+    aplicarFiltro();
   }
-  
-document.getElementById("adicionar-receita").addEventListener("click", adicionarReceita);
+}
+
+filtro.addEventListener("input", aplicarFiltro);
+btnAdicionar.addEventListener("click", adicionarReceita);
+
+aplicarFiltro();
+
+function funcaoHome() {
+   window.location.href = "../pages/Home.html";
+}
