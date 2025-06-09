@@ -68,7 +68,7 @@ button.excluir {
   color: white;
 }
 
-#adicionar-receita {
+.botao {
   margin: 10px 0;
   padding: 8px 16px;
   background-color: #4d1bc2;
@@ -78,6 +78,8 @@ button.excluir {
   cursor: pointer;
 }
 
-#adicionar-receita:hover {
+.botao:hover {
   background-color: #a10087;
 }
+
+
