@@ -1,3 +1,18 @@
+function togglePassword() {
+    var passwordField = document.getElementById("senha");
+    var eyeIcon = document.getElementById("eye-icon");
+
+   
+    if (passwordField.type === "password") {
+        passwordField.type = "text";
+        eyeIcon.classList.remove("fa-eye");
+        eyeIcon.classList.add("fa-eye-slash"); 
+    } else {
+        passwordField.type = "password";
+        eyeIcon.classList.remove("fa-eye-slash");
+        eyeIcon.classList.add("fa-eye"); 
+    }
+}
 
 function validarEmail(email) {
   const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;

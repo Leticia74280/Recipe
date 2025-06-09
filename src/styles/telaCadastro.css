@@ -15,7 +15,6 @@ body {
     background: url('../images/flat-lay-delicious-fruits-muffins.jpg');
     background-size: cover;
     background-position: center;
-
 }
 
 .container {
@@ -33,7 +32,6 @@ body {
 .container h1 {
     font-size: 30px;
     text-align: center;
-
 }
 
 .input-box {
@@ -69,20 +67,16 @@ body {
     display: flex;
     justify-content: space-between;
     white-space: nowrap;
-
 }
-
 
 .remember-forgot label input {
     accent-color: #fff;
     margin-right: 5px;
-
 }
 
 .remember-forgot a {
     text-decoration: none;
     color: #fff;
-
 }
 
 .remember-forgot a:hover {
@@ -100,8 +94,6 @@ body {
     font-size: 13px;
     color: black;
     font-weight: 400;
-
-
 }
 
 .cadastro:hover {
@@ -113,12 +105,45 @@ body {
 .register-link a {
     text-decoration: none;
     color: #f80303;
-
-
 }
 
 .register-link a:hover {
     text-decoration: underline;
-
     transition: 0.5s;
+}
+
+
+.voltar {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.voltar i {
+    font-size: 18px;  
+}
+
+.voltar:hover {
+    background-color: #ffffff;
+}
+
+
+#eye-icon {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
 }

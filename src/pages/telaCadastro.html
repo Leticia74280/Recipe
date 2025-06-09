@@ -7,15 +7,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="shortcut icon" href="../images/Logo-Site_de_Receitas.png" type="image/x-icon">
-        <link rel="stylesheet" href="../styles/telaCadastro.css">
+    <link rel="shortcut icon" href="../images/Logo-Site_de_Receitas.png" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/telaCadastro.css">
     <title>Cadastro</title>
 </head>
 
 <body>
 
-
   <main class="container">
+    
+  <a href="index.html" class="voltar">
+    <i class="fa-solid fa-arrow-left"></i>
+  </a>
+
     <form onsubmit="telaCadastro(event)">
         <h1>Cadastro</h1>
 
@@ -31,19 +35,18 @@
 
         <div class="input-box">
             <input placeholder="Senha" type="password" id="senha">
-            <i class="fa-duotone fa-solid fa-lock"></i>
+            
+            <i class="fa-solid fa-eye" id="eye-icon" onclick="togglePassword()"></i>
         </div>
 
         <button type="submit" class="cadastro">Cadastre-se</button>
     </form>
 
     <div id="listaUsuarios"></div>
-</main>
+  </main>
 
- 
+  <script src="../javascript/crud.js"></script>
 
-
-    <script src="../javascript/crud.js"></script>
 </body>
 
 </html>
