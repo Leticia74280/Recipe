@@ -2,7 +2,7 @@ function salvarlogin(event) {
   event.preventDefault()
 
   const emailInput = document.getElementById("usuário").value.trim();
-  const senhaInput = document.getElementById("senha").value;
+  const senhaInput = document.getElementById("senha").value.trim();
 
   const usuarios = JSON.parse(localStorage.getItem("usuarios") || "[]");
 
