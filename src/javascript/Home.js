@@ -16,3 +16,10 @@ document.addEventListener('DOMContentLoaded', () => {
   if (username) usernameDisplay.textContent = username;
   if (bio) bioDisplay.textContent = bio;
 });
+
+
+//iniciando API
+
+fetch("https://api-receitas-pi.vercel.app/receitas/todas")
+    .then((response) => response.json())
+    .then((data) => console.log(data))

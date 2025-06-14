@@ -69,6 +69,7 @@ body {
 .username {
     font-size: 2em;
     color: #d35400;
+    padding: 10px ;
 }
 
 .bio {
@@ -139,7 +140,7 @@ body {
 .recipe-info h4 {
     margin-top: 10px;
     margin-bottom: 5px;
-    color: #d35400;
+    color: #d15400;
 }
 
 .recipe-info h5 {
@@ -164,6 +165,8 @@ body {
     font-weight: 500;
     color: #555;
 }
+
+
 
 .footer {
     background-color: #ffa07a;

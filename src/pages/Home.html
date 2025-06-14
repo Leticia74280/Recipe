@@ -1,400 +1,207 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="../images/Logo-Site_de_Receitas.png" type="image/x-icon">
-  <link rel="stylesheet" href="../styles/Home.css">
-  <title>Home</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="../images/Logo-Site_de_Receitas.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../styles/Home.css" />
+    <title>Home</title>
+  </head>
 
-<body>
-  <div class="profile-container">
-    <div class="profile-header">
-     <div class="profile-pic-wrapper">
-      <img src="../images/Foto-de-usuario.png" alt="Foto de Perfil" class="profile-pic" />
-     </div>
-      <div class="profile-info">
-        <h1 class="username">Usuário</h1>
-        <p class="bio">Bio</p>
-        <div class="stats">
-          <div><strong>9</strong> Receitas</div>
-          <div><strong><a href="../pages/Home.html">Home</a></strong></div>
-          <div><strong><a href="../pages/Perfil.html">Perfil</a></strong></div>
-          <div><strong><a href="../pages/listagem.html">Lista de Receitas</a></strong></div>
-          <div><strong><a href="../pages/index.html">Login</a></strong></div>
-          <div><strong><a href="../pages/telaCadastro.html">Cadastro</a></strong></div>
+  <body>
+    <div class="profile-container">
+      <div class="profile-header">
+        <div class="profile-pic-wrapper">
+          <img
+            src="../images/Foto-de-usuario.png"
+            alt="Foto de Perfil"
+            class="profile-pic"
+          />
+        </div>
+        <div class="profile-info">
+          <h1 class="username">Usuário</h1>
+          
+          <div class="stats">
+            <div>
+              <strong><a href="../pages/Home.html">Home</a></strong>
+            </div>
+            <div>
+              <strong><a href="../pages/Perfil.html">Perfil</a></strong>
+            </div>
+            <div>
+              <strong
+                ><a href="../pages/listagem.html">Lista de Receitas</a></strong
+              >
+            </div>
+            <div>
+              <strong><a href="../pages/index.html">Login</a></strong>
+            </div>
+            <div>
+              <strong><a href="../pages/telaCadastro.html">Cadastro</a></strong>
+            </div>
+            
+
+            <div class="results-container" id="resultsContainer"></div>
+          </div>
         </div>
       </div>
     </div>
-      <h2 class="section-title">Receitas</h2>
+    
+    <h2 class="section-title">Receitas</h2>
+      
     <div class="recipes-gallery">
       <div class="recipe-card">
-        <img src="../images/Bolo-de-chocolate.jpg" alt="Bolo de Chocolate" />
+        <img src="https://media-cdn.tripadvisor.com/media/photo-s/1a/c8/90/f6/frango-agri-doce-rodizio.jpg" alt="Bolo de Chocolate" />
+        <p>Frango Agridoce</p>
+        <div class="recipe-info">
+          <h4>Ingredientes:</h4>
+          <ul id="listaProduto">
+            "500g de peito de frango em cubos, <br>1 pimentão vermelho fatiado, <br>1 pimentão verde fatiado, <br>1 cebola cortada em pedaços grandes, 1 cenoura fatiada, 1 abacaxi em pedaços, 2 colheres de sopa de molho de soja, <br>2 colheres de sopa de vinagre de arroz, <br>3 colheres de sopa de ketchup, 2 colheres de sopa de açúcar, 1 colher de chá de amido de milho, sal e pimenta a gosto"
+          </ul>
+          </ul>
+          <h4>Modo de Preparo:</h4>
+          <ol>
+              1. Tempere o frango com sal e pimenta. <br>2. Em uma frigideira grande, aqueça um pouco de óleo e refogue o frango até dourar. <br>3. Adicione os pimentões, a cebola, a cenoura e refogue por mais alguns minutos. <br> 4. Em uma tigela, misture o molho de soja, vinagre, ketchup, açúcar e amido de milho. <br> 5. Adicione o abacaxi e a mistura de molho à frigideira. <br>
+              6. Cozinhe até que o molho engrosse e cubra bem os ingredientes. <br>7. Sirva quente."
+            
+          </ol>
+          
+        </div>
+      </div>
+      <div class="recipe-card">
+        <img src="https://i.ytimg.com/vi/3wJH3dYE8Ng/maxresdefault.jpg" alt="Lasanha" />
+        <p>Salada Grega</p>
+        <div class="recipe-info">
+          <h4>Ingredientes:</h4>
+          
+          <ul>
+            "2 tomates cortados em cubos,<br>1 pepino fatiado, <br>1 cebola roxa fatiada, <br>1 pimentão verde fatiado,<br> 100g de queijo feta esfarelado, 10 azeitonas pretas, <br>2 colheres de sopa de azeite de oliva,<br>1 colher de sopa de suco de limão, orégano seco a gosto, sal e pimenta a gosto"
+          </ul>
+          
+          <h4>Modo de Preparo:</h4>
+          
+          <ol>
+           "1. Em uma tigela grande, misture os tomates, o pepino, a cebola e o pimentão. <br>2. Adicione o queijo feta e as azeitonas. <br> 3. Em uma tigela pequena, misture o azeite de oliva, o suco de limão, o orégano, o sal e a pimenta. <br>4. Despeje o molho sobre a salada e misture bem. <br>5. Sirva imediatamente."
+          </ol>
+
+        </div>
+      </div>
+      <div class="recipe-card">
+        <img src="https://i.pinimg.com/originals/bd/86/82/bd8682378b450e103c2e36cd29be60cb.png" alt="Panqueca" />
+        <p>Panqueca Americana</p>
+        <div class="recipe-info">
+          <h4>Ingredientes:</h4>
+          "1 xícara de farinha de trigo, <br>1 colher de sopa de açúcar, <br>1 colher de chá de fermento em pó, <br> 1/2 colher de chá de bicarbonato de sódio, 1/4 colher de chá de sal, 1 xícara de leite, 1 ovo, <br>2 colheres de sopa de manteiga derretida, <br>1 colher de chá de essência de baunilha"
+          <ul>
+          
+          </ul>
+          <h4>Modo de Preparo:</h4>
+          <ol>
+            "1. Em uma tigela, misture a farinha, o açúcar, o fermento, o bicarbonato e o sal. <br>2. Em outra tigela, bata o leite, o ovo, a manteiga derretida e a baunilha. <br> 3. Adicione os ingredientes líquidos aos secos e misture até obter uma massa homogênea. <br> 4. Aqueça uma frigideira untada em fogo médio e despeje pequenas porções de massa, cozinhando até que apareçam bolhas na superfície. <br>5. Vire as panquecas e cozinhe até dourar o outro lado."
+            
+          </ol>
+        </div>
+      </div>
+      <div class="recipe-card">
+        <img src="https://static.itdg.com.br/images/360-240/04f97152aa37bf92d0ae8766fc17ae16/339092-original.jpg"alt="quinche" />
+        <p>Quiche de Espinafre com Queijo</p>
+        <div class="recipe-info">
+          <h4>Ingredientes:</h4>
+          <ul>
+            "1 massa pronta para quiche, <br>200g de espinafre fresco,<br> 1 xícara de queijo parmesão ralado,<br> 1 xícara de queijo muçarela ralado, <br>3 ovos, <br>1 xícara de creme de leite, sal e pimenta a gosto,<br>1 cebola picada, <br>2 dentes de alho picados"
+          </ul>
+          <h4>Modo de Preparo:</h4>
+          <ol>
+            "1. Preaqueça o forno a 180°C. <br>2. Em uma frigideira, refogue a cebola e o alho até ficarem dourados. Adicione o espinafre e refogue até murchar. <br>3. Em uma tigela, bata os ovos, o creme de leite, o sal e a pimenta. <br> 4. Adicione os queijos e o espinafre refogado à mistura de ovos. <br>5. Coloque a massa para quiche em uma forma, despeje a mistura sobre a massa. <br>6. Leve ao forno por aproximadamente 30-35 minutos ou até o recheio estar firme e dourado."
+          </ol>
+        </div>
+      </div>
+      <div class="recipe-card">
+        <img src="https://i.ytimg.com/vi/QFMxJWh3mqE/maxresdefault.jpg" alt="Feijoada" />
         <p>Bolo de Chocolate</p>
         <div class="recipe-info">
           <h4>Ingredientes:</h4>
-          <h5>Massa:</h5>
           <ul>
-            <li>3 ovos</li>
-            <li>1 e meia xícara de chá de açúcar</li>
-            <li>1 xícara de chocolate em pó</li>
-            <li>Meia xícara de chá de óleo</li>
-            <li>1 xícara de chá de chocolate em pó</li>
-            <li>2 xícaras de chá de farinha de trigo</li>
-            <li>1 xícara de chá de água quente</li>
-            <li>1 colher de sopa de fermento em pó</li>
-          </ul>
-          <h5>Cobertura:</h5>
-          <ul>
-            <li>1 e meia xícara de chá de leite</li>
-            <li>Meia xícara de chá de chocolate em pó</li>
-            <li>1 colher de sopa de manteiga</li>
-            <li>1 xícara de chá de açúcar</li>
+            "2 xícaras de farinha de trigo, <br>1 xícara de açúcar, <br>1 xícara de chocolate em pó <br> 1 colher de sopa de fermento em pó, <br>1 xícara de leite, <br>3 ovos,<br> 1/2 xícara de óleo"
           </ul>
           <h4>Modo de Preparo:</h4>
-          <h5>Massa</h5>
+          "1. Preaqueça o forno a 180°C. <br>2. Em uma tigela, misture a farinha, o açúcar, o chocolate em pó e o fermento. <br>3. Adicione os ovos, o leite e o óleo, e misture bem até obter uma massa homogênea. <br>4. Despeje a massa em uma forma untada e enfarinhada. <br>5. Leve ao forno por aproximadamente 35 minutos ou até que, ao espetar um palito, ele saia limpo."
+          
+        </div>
+      </div>
+      <div class="recipe-card">
+        <img src="https://i.ytimg.com/vi/YSeE59idBos/maxresdefault.jpg" alt="Curry de Grão-de-Bico" />
+        <p>Curry de Grão-de-Bico</p>
+        <div class="recipe-info">
+          <h4>Ingredientes:</h4>
+          "2 xícaras de grão-de-bico cozido, <br>1 cebola picada,<br>2 dentes de alho picados, <br>1 pedaço de gengibre ralado, <br>1 lata de tomates pelados, <br>1 xícara de leite de coco, 2 colheres de sopa de curry em pó, <br>1 colher de chá de cominho em pó, <br>1 colher de chá de açafrão-da-terra, sal e pimenta a gosto, coentro fresco para decorar"
+          <ul>
+            
+          </ul>
+          
+          </ul>
+          <h4>Modo de Preparo:</h4>
           <ol>
-            <li>Em uma tigela, coloque 3 ovos, 1 e meia xícara de chá de açúcar, meia xícara de chá de óleo, 1 xícara de chá de chocolate em pó e 2 xícaras de chá de farinha de trigo. Misture delicadamente os ingredientes.</li>
-            <li>Em seguida, adicione 1 xícara de chá de água quente, 1 colher de sopa de fermento em pó e bata até ficar homogêneo.</li>
-            <li>Transfira a massa para uma forma untada e enfarinhada com uma mistura de farinha de trigo e chocolate em pó. Leve para assar em forno preaquecido a 180 graus Celsius por 40 minutos.</li>
-          </ol>
-          <h5>Cobertura</h5>
-          <ol>
-            <li>Em uma panela, coloque 1 e meia xícara de chá de leite, meia xícara de chá de chocolate em pó, 1 colher de sopa de manteiga e 1 xícara de chá de açúcar. Misture, ligue o fogo e deixe ferver.</li>
-            <li>Despeje a calda no bolo ainda quente e sirva em seguida.</li>
+            "1. Em uma panela grande, aqueça um pouco de óleo e refogue a cebola, o alho e o gengibre até ficarem dourados. <br> 2. Adicione o curry, o cominho e o açafrão, e cozinhe por 1 minuto. <br>3. Adicione os tomates pelados e cozinhe por 5 minutos. <br>4. Acrescente o grão-de-bico cozido e o leite de coco, e deixe cozinhar em fogo baixo por 10 minutos. <br>5. Tempere com sal e pimenta a gosto. <br>6. Decore com coentro fresco e sirva com arroz."
           </ol>
         </div>
       </div>
       <div class="recipe-card">
-        <img src="../images/Lasanha-de-carne.jpg" alt="Lasanha" />
-        <p>Lasanha de Carne</p>
+        <img src="https://i.ytimg.com/vi/cc8QuY7seFQ/maxresdefault.jpg" alt="Pudim" />
+        <p>Torta de Limão</p>
         <div class="recipe-info">
           <h4>Ingredientes:</h4>
-          <h5>Molho à bolonhesa:</h5>
+          
           <ul>
-            <li>1 quilo e meio de carne moída</li>
-            <li>1 fio de azeite</li>
-            <li>2 cebolas picadas</li>
-            <li>2 dentes de alho picados</li>
-            <li>1 pimentão verde picado</li>
-            <li>1 pimentão amarelo picado</li>
-            <li>1 pimentão vermelho picado</li>
-            <li>3 tomates picados em cubos</li>
-            <li>Tempero verde a gosto</li>
-            <li>Molho de tomate a gosto</li>
-            <li>Sal a gosto</li>
-          </ul>
-          <h5>Lasanha:</h5>
-          <ul>
-            <li>500 gramas de Lasanha Dona Benta Direto ao Forno</li>
-            <li>600 gramas de queijo muçarela</li>
-            <li>Queijo parmesão ralado a gosto</li>
-            <li>Molho à bolonhesa</li>
+            "1 pacote de biscoito de maisena, <br>100g de manteiga derretida,<br>1 lata de leite condensado, <br>1/2 xícara de suco de limão, <br>1 lata de creme de leite sem soro, raspas de limão para decorar"
           </ul>
           <h4>Modo de Preparo:</h4>
-          <h5>Molho à bolonhesa</h5>
           <ol>
-            <li>Em uma panela, coloque 1 fio de azeite e 1 quilo de carne moída. Frite até ficar soltinho.</li>
-            <li>Em seguida, acrescente 2 cebolas picadas, 2 dentes de alho picados, 1 pimentão verde picado, 1 pimentão amarelo picado, 1 pimentão vermelho picado, 3 tomates picados em cubos e tempero verde a gosto. Refogue.</li>
-            <li>Depois, adicione molho de tomate a gosto e sal a gosto. Misture e reserve.</li>
-          </ol>
-          <h5>Lasanha</h5>
-          <ol>
-            <li>Em um refratário que possa ir ao forno, espalhe a primeira camada de molho à bolonhesa no fundo.</li>
-            <li>Em seguida, faça uma camada com a Lasanha Dona Benta Direto ao Forno .</li>
-            <li>Depois, faça mais uma camada com molho à bolonhesa. Em seguida, acrescente uma camada de queijo muçarela.</li>
-            <li>Repita as camadas e finalize com queijo parmesão ralado a gosto.</li>
-            <li>Leve ao forno preaquecido a 200 graus Celsius por 20 minutos.</li>
-            <li>Depois, aumente a temperatura para 250 graus Celsius e deixe assar por mais 20 minutos.</li>
-            <li>Sirva em seguida.</li>
+            "1. Triture os biscoitos de maisena no processador até virar uma farinha fina. <br> 2. Misture a manteiga derretida com os biscoitos triturados até formar uma massa. <br>3. Forre o fundo de uma forma de torta com a massa e leve ao forno pré-aquecido a 180°C por 10 minutos. <br> 4. Enquanto isso, misture o leite condensado, o suco de limão e o creme de leite até ficar homogêneo. <br>5. Despeje o recheio sobre a massa assada e leve à geladeira por pelo menos 4 horas. <br>6. Decore com raspas de limão antes de servir."
           </ol>
         </div>
       </div>
       <div class="recipe-card">
-        <img src="../images/Salada.jpg" alt="Salada" />
-        <p>Salada</p>
+        <img src="https://assets.tmecosys.cn/image/upload/t_web767x639/img/recipe/vimdb/269097.jpg" alt="Acarajé" />
+        <p>Risoto de Cogumelos</p>
         <div class="recipe-info">
           <h4>Ingredientes:</h4>
-          <h5>Salada de tomate</h5>
           <ul>
-            <li>4 unidades de tomates orgânicos</li>
-            <li>2 unidades de cebola-roxa pequena</li>
-            <li>Meio maço de manjericão</li>
-            <li>Meia xícara de chá de azeite</li>
-            <li>Suco de 1 limão</li>
-            <li>Sal a gosto</li>
-          </ul>
+            "2 xícaras de arroz arbóreo, <br>200g de cogumelos variados fatiados, <br>1 cebola picada, <br>2 dentes de alho picados, <br> 1/2 xícara de vinho branco, <br>1 litro de caldo de legumes, <br>1/2 xícara de queijo parmesão ralado, <br>2 colheres de sopa de manteiga, sal e pimenta a gosto, salsinha picada para decorar"
           <h4>Modo de Preparo:</h4>
           <ol>
-            <li>Corte os tomates com sementes em cubos.</li>
-            <li>Cortar as cebolas em fatias bem finas.</li>
-            <li>Rasgue o manjericão grosseiramente.</li>
-            <li>Coloque tudo em um bowl e acrescente o sal, o azeite e o suco do limão. Sirva em seguida.</li>
+            "1. Em uma panela grande, aqueça 1 colher de manteiga e refogue a cebola e o alho até ficarem macios. <br> 2. Adicione os cogumelos e cozinhe até dourar. <br>3. Acrescente o arroz arbóreo e refogue por 2 minutos. <br>4. Despeje o vinho branco e cozinhe até evaporar. <br>5. Adicione o caldo de legumes, uma concha por vez, mexendo sempre, até o arroz ficar al dente e cremoso. <br>6. Misture o queijo parmesão e a outra colher de manteiga. <br>7. Tempere com sal e pimenta. 8. Decore com salsinha picada antes de servir."
           </ol>
+          
         </div>
       </div>
       <div class="recipe-card">
-        <img src="../images/Pizza-de-pepperoni.jpg" alt="Pizza de Pepperoni" />
-        <p>Pizza de Pepperoni</p>
-        <div class="recipe-info">
-          <h4>Ingredientes:</h4>
-          <h5>Massa:</h5>
-          <ul>
-            <li>250 g de farinha de trigo</li>
-            <li>150 ml de água morna</li>
-            <li>2 colheres de sopa de fermento biológico</li>
-            <li>1 colher de sopa de açúcar</li>
-            <li>1/2 colher de sopa de sal</li>
-            <li>1 colher de sopa de azeite de oliva</li>
-            <li>2 dentes de alho</li>
-            <li>1/2 cebola picada</li>
-            <li>2 tomates maduros descascados e sem sementes</li>
-            <li>1/4 copo de água</li>
-            <li>3 colheres de azeite</li>
-            <li>1 pitada de açúcar</li>
-          </ul>
-          <h5>Cobertura:</h5>
-          <ul>
-            <li>Salame italiano, finamente fatiado</li>
-            <li>1/2 pimentão em rodelas</li>
-            <li>Queijo mussarela em fatias</li>
-            <li>Pimenta calabresa (opcional)</li>
-          </ul>
-          <h4>Modo de Preparo:</h4>
-          <h5>Massa</h5>
-          <ol>
-            <li>Dilua o fermento, o sal e o açúcar na água morna, conforme instruções da embalagem do fermento.</li>
-            <li>Misture com a farinha e mexa com as mãos em uma tigela até formar uma massa consistente.</li>
-            <li>Sove bem a massa por aproximadamente 5 minutos.</li>
-            <li>Deixe a massa descansar por 40 minutos para que possa crescer.</li>
-            <li>Com um rolo de macarrão, abra a massa no formato desejado de pizza, com a espessura de 0,5 cm.</li>
-            <li>Pré-asse no forno a 180°C por 5 minutos.</li>
-          </ol>
-          <h5>Molho</h5>
-          <ol>
-            <li>Bata no processador os tomates com o alho e a cebola.</li>
-            <li>Aqueça o azeite em uma panela e refogue os ingredientes processados.</li>
-            <li>Após refogar, acrescente a água e a pitada de açúcar e deixe cozinhar até encorpar na consistência desejada.</li>
-          </ol>
-          <h5>Montagem</h5>
-          <ol>
-            <li>Distribua o molho de tomate sobre a massa pré-assada.</li>
-            <li>Cubra com queijo mussarela fatiado e distribua por cima as fatias de salame italiano, os pimentões e as cebolas (opcional) em rodelas sobre o queijo.</li>
-            <li>Salpique com pimenta calabresa.</li>
-            <li>Regue com um fio de azeite de oliva extra-virgem e asse no forno bem quente por 12 minutos, ou até dourar o recheio.</li>
-          </ol>
-        </div>
-      </div>
-      <div class="recipe-card">
-        <img src="../images/Feijoada.jpg" alt="Feijoada" />
-        <p>Feijoada</p>
+        <img src="https://images.aws.nestle.recipes/resized/5b069c3ed2feea79377014f6766fcd49_Original_NTH_Chocolate_Chip_Cookie_1080_850.jpg""../images/Baiao-de-dois.jpg"alt="Baião de Dois" />
+        <p>Cookies de Chocolate</p>
         <div class="recipe-info">
           <h4>Ingredientes:</h4>
           <ul>
-            <li>500 g de feijão preto</li>
-            <li>300 g de carne-seca dessalgada e picada</li>
-            <li>200 g de linguiça de frango ou de peru em rodelas</li>
-            <li>1 paio de frango ou de peru em rodelas (opcional)</li>
-            <li>2 cebolas picadinhas</li>
-            <li>4 dentes de alho amassados</li>
-            <li>2 folhas de louro</li>
-            <li>Sal e pimenta-do-reino a gosto</li>
-            <li>Óleo ou azeite para refogar</li>
+            "1 xícara de manteiga, <br>1 xícara de açúcar mascavo, <br>1/2 xícara de açúcar branco, <br>2 ovos, <br>2 colheres de chá de essência de baunilha, <br>2 1/4 xícaras de farinha de trigo, <br>1/2 colher de chá de bicarbonato de sódio, <br>1/2 colher de chá de sal, <br>2 xícaras de gotas de chocolate"
           </ul>
           <h4>Modo de Preparo:</h4>
-          <h5>Preparar o feijão</h5>
+          "1. Preaqueça o forno a 180°C. <br>2. Em uma tigela grande, bata a manteiga, o açúcar mascavo e o açúcar branco até ficar cremoso. <br>3. Adicione os ovos e a essência de baunilha, e misture bem. <br>4. Em outra tigela, misture a farinha, o bicarbonato de sódio e o sal. <br>5. Gradualmente, adicione os ingredientes secos à mistura de manteiga, mexendo até incorporar. <br>6. Adicione as gotas de chocolate e misture até distribuir uniformemente. <br>7. Com uma colher, coloque porções de massa em uma assadeira forrada com papel manteiga. <br>8. Asse por 10-12 minutos ou até as bordas estarem douradas. <br>9. Deixe esfriar antes de servir."
           <ol>
-            <li>Deixe o feijão de molho por aproximadamente 1 hora, trocando a água pelo menos uma vez.</li>
-            <li>Escorra a água e coloque o feijão em uma panela de pressão, cobrindo com água uns 2 dedos acima. Cozinhe por aproximadamente 30 minutos após pegar pressão.</li>
-          </ol>
-          <h5>Refogar as carnes</h5>
-          <ol>
-            <li>Enquanto o feijão cozinha, esquente um pouco de óleo ou azeite em uma panela.</li>
-            <li>Adicione as cebolas e o alho, refogando até dourar.</li>
-            <li>Acrescente a carne-seca, a linguiça e o paio (se estiver usando). Deixe dourar levemente.</li>
-          </ol>
-          <h5>Unir feijão e carnes</h5>
-          <ol>
-            <li>Quando o feijão estiver cozido e macio, adicione-o à panela com as carnes refogadas.</li>
-            <li>Acrescente as folhas de louro, sal e pimenta-do-reino a gosto.</li>
-            <li>Deixe cozinhar por mais 40 minutos em fogo baixo, mexendo ocasionalmente, até que os sabores estejam bem incorporados.</li>
-          </ol>
-          <h5>Finalizar e servir</h5>
-          <ol>
-            <li>Retire as folhas de louro antes de servir.</li>
-            <li>Sirva a feijoada acompanhada de arroz branco, farofa, couve refogada e fatias de laranja.</li>
-          </ol>
-        </div>
-      </div>
-      <div class="recipe-card">
-        <img src="../images/Torta-de-morango.jpg" alt="Torta de Morango" />
-        <p>Torta de Morango</p>
-        <div class="recipe-info">
-          <h4>Ingredientes:</h4>
-          <h5>Massa:</h5>
-          <ul>
-            <li>200 g de biscoito maizena</li>
-            <li>100 g de manteiga derretida</li>
-            <li>2 colheres de sopa de açucar</li>
-          </ul>
-          <h5>Recheio:</h5>
-          <ul>
-            <li>400 g de creme de leite</li>
-            <li>1 lata de leite condensado</li>
-            <li>1 caixa de gelatina de morango</li>
-            <li>200 ml de água quente</li>
-          </ul>
-          <h5>Cobertura:</h5>
-          <ul>
-            <li>300 g de morangos frescos cortados em fatias</li>
-            <li>2 colheres de sopa de açúcar</li>
-            <li>1 colher de sopa de água</li>
-          </ul>
-          <h4>Modo de Preparo:</h4>
-          <h5>Massa</h5>
-          <ol>
-            <li>Triture os biscoitos maisena no liquidificador ou processador até formar uma farinha fina.</li>
-            <li>Em uma tigela, misture os biscoitos triturados com a manteiga derretida e o açúcar até formar uma massa compacta.</li>
-            <li>Modele a massa em uma forma de fundo removível, pressionando bem para que cubra todo o fundo e as laterais.</li>
-            <li>Leve a forma para o refrigerador por pelo menos 30 minutos para firmar a massa.</li>
-          </ol>
-          <h5>Recheio</h5>
-          <ol>
-            <li>Dissolva a gelatina de morango na água quente e reserve para esfriar um pouco.</li>
-            <li>Em um liquidificador, bata o creme de leite, o leite condensado e a gelatina já dissolvida até obter uma mistura homogênea.</li>
-            <li>Retire a forma com a massa do refrigerador e despeje o recheio sobre a base. Leve novamente à geladeira por cerca de 2 horas ou até que o recheio esteja firme.</li>
-          </ol>
-          <h5>Cobertura</h5>
-          <ol>
-            <li>Em uma panela, coloque os morangos cortados, o açúcar e a água. Cozinhe em fogo baixo por cerca de 5 minutos, até formar uma calda leve.</li>
-            <li>Retire do fogo e deixe esfriar.</li>
-            <li>Após o recheio firmar, distribua os morangos em fatias sobre a torta e regue com a calda de morango.</li>
-          </ol>
-        </div>
-      </div>
-      <div class="recipe-card">
-        <img src="../images/Pudim.jpg" alt="Pudim" />
-        <p>Pudim</p>
-        <div class="recipe-info">
-          <h4>Ingredientes:</h4>
-          <h5>Pudim de leite condensado:</h5>
-          <ul>
-            <li>6 colheres de sopa de açúcar</li>
-            <li>1 lata de leite condensado</li>
-            <li>1 lata de leite, use a mesma medida do leite condensado</li>
-            <li>3 ovos</li>
-          </ul>
-          <h4>Modo de Preparo:</h4>
-          <ol>
-            <li>Numa forma para pudim, de 20 centímetros de diâmetro, coloque 6 colheres de sopa de açúcar e leve ao fogo médio até virar uma calda caramelada, por mais ou menos 3 minutos.</li>
-            <li>Retire do fogo e vá virando a fôrma, de modo que a calda forre todo o fundo e lateral da mesma. Reserve.</li>
-            <li>Num liquidificador coloque uma lata de leite condensado, uma lata de leite, a mesma medida da lata de leite condensado, e 3 ovos e bata bem por mais ou menos 1 minuto.</li>
-            <li>Desligue o liquidificador e deixe a mistura descansar por 15 minutos.</li>
-            <li>Com esta espera a espuma fica sobre a superfície, o pudim fica sem furinhos, mas macio.</li>
-            <li>Com a ajuda de uma colher segure a espuma que está na superfície e despeje o conteúdo do liquidificador, com cuidado, na fôrma caramelada reservada acima e leve ao forno médio, em banho-maria, a 180 graus Celsius por uma hora e meia.</li>
-            <li>Retire do forno, deixe esfriar e leve à geladeira por mais ou menos duas horas. Desenforme e sirva em seguida.</li>
-          </ol>
-        </div>
-      </div>
-      <div class="recipe-card">
-        <img src="../images/Acaraje.jpg" alt="Acarajé" />
-        <p>Acarajé</p>
-        <div class="recipe-info">
-          <h4>Ingredientes:</h4>
-          <h5>Para a massa:</h5>
-          <ul>
-            <li>500 g de feijão-fradinho</li>
-            <li>1 cebola grande ralada</li>
-            <li>Sal a gosto</li>
-            <li>Azeite de dendê para fritar</li>
-          </ul>
-          <h5>Para o recheio:</h5>
-          <ul>
-            <li>500 g de camarão seco torrado e moído</li>
-            <li>2 pimentas malaguetas</li>
-            <li>1 cebola ralada</li>
-            <li>1 colher de sopa de coentro fresco bem batido</li>
-            <li>2 xícaras de chá de azeite de dendê</li>
-          </ul>
-          <h4>Modo de Preparo:</h4>
-          <h5>Preparação da massa</h5>
-          <ol>
-            <li>Deixe o feijão de molho em água fria por pelo menos 12 horas.</li>
-            <li>Retire a casca do feijão esfregando-o entre as mãos ou utilizando um processador.</li>
-            <li>Triture o feijão descascado até obter uma massa homogênea.</li>
-            <li>Misture a cebola ralada à massa e adicione sal a gosto.</li>
-            <li>Bata a massa vigorosamente com uma colher de pau ou em uma batedeira até que fique leve e aerada.</li>
-          </ol>
-          <h5>Preparação do recheio</h5>
-          <ol>
-            <li>Misture todos os ingredientes do recheio (camarão moído, pimentas, cebola, coentro e azeite de dendê) em uma panela.</li>
-            <li>Cozinhe em fogo baixo por cerca de 10 minutos, mexendo ocasionalmente, até que o recheio esteja bem incorporado.</li>
-          </ol>
-          <h5>Montagem e fritura</h5>
-          <ol>
-            <li>Aqueça o azeite de dendê em uma panela funda.</li>
-            <li>Modele pequenas bolinhas com a massa e frite-as no azeite quente até que fiquem douradas e crocantes por fora.</li>
-            <li>Retire os bolinhos e deixe escorrer em papel absorvente.</li>
-            <li>Corte os bolinhos ao meio e recheie com o molho de camarão.</li>
-          </ol>
-        </div>
-      </div>
-      <div class="recipe-card">
-        <img src="../images/Baiao-de-dois.jpg" alt="Baião de Dois" />
-        <p>Baião de Dois</p>
-        <div class="recipe-info">
-          <h4>Ingredientes:</h4>
-          <ul>
-            <li>1 xícara (chá) de arroz</li>
-            <li>1 xícara (chá) de feijão verde ou feijão macassa</li>
-            <li>300 g de carne de sol desfiada ou cortada em pedaços pequenos</li>
-            <li>1 linguiça calabresa cortada em rodelas</li>
-            <li>1 colher (sopa) de azeite de oliva</li>
-            <li>1 cebola picada</li>
-            <li>1 tomate picado</li>
-            <li>1 pimentão picado</li>
-            <li>1 folha de louro</li>
-            <li>1/2 xícara (chá) de queijo coalho em cubos</li>
-            <li>1/4 xícara (chá) de nata ou creme de leite (opcional)</li>
-            <li>Sal e pimenta-do-reino a gosto</li>
-          </ul>
-          <h4>Modo de Preparo:</h4>
-          <h5>Cozinhar o feijão</h5>
-          <ol>
-            <li>Cozinhe o feijão verde ou feijão macassa em uma panela até que fique macio, mas não desmanche. Reserve.</li>
-          </ol>
-          <h5>Preparar a carne-de-sol</h5>
-          <ol>
-            <li>Dessalgue a carne de sol deixando de molho em água por algumas horas. Depois, frite a carne desfiada ou em pedaços pequenos, até dourar.</li>
-          </ol>
-          <h5>Refogar os temperos</h5>
-          <ol>
-            <li>Em uma panela grande, aqueça o azeite de oliva e refogue a cebola, o tomate e o pimentão até ficarem macios.</li>
-          </ol>
-          <h5>Adicionar a carne e linguiça</h5>
-          <ol>
-            <li>Junte a carne de sol já frita e a linguiça calabresa cortada em rodelas ao refogado e mexa bem.</li>
-          </ol>
-          <h5>Cozinhar o arroz</h5>
-          <ol>
-            <li>Adicione o arroz à panela, mexa bem para incorporar os sabores, e depois adicione o feijão cozido e a folha de louro. Misture tudo e adicione água suficiente para cozinhar o arroz (cerca de 2 xícaras de água). Deixe cozinhar até o arroz estar pronto.</li>
-          </ol>
-          <h5>Finalizar o prato</h5>
-          <ol>
-            <li>Após o arroz ter absorvido o caldo e ficado pronto, adicione o queijo coalho em cubos e, se desejar, a nata ou creme de leite. Mexa delicadamente e deixe o queijo derreter um pouco.</li>
-          </ol>
-          <h5>Servir</h5>
-          <ol>
-            <li>Ajuste o sal e a pimenta-do-reino a gosto. Sirva quente.</li>
+            
           </ol>
         </div>
       </div>
     </div>
 
     <footer class="footer">
-    <p>&copy; 2025 Developed by Receitas Deliciosas. Todos os direitos reservados.</p>
-  </footer>
-  <script src="../javascript/Home.js"></script>    
-</body>
+      <p>
+        &copy; 2025 Developed by Receitas Deliciosas. Todos os direitos
+        reservados.
+      </p>
+    </footer>
+    <script src="../javascript/Home.js"></script>
+  </body>
 </html>
