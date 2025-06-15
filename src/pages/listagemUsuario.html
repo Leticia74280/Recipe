@@ -3,33 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lista de Receitas</title>
+  <title>Lista de Usuarios</title>
   <link rel="shortcut icon" href="../images/Logo-Site_de_Receitas.png" type="image/x-icon">
   <link rel="stylesheet" href="../styles/listagem.css" />
 </head>
 <body>
   <div class="container">
-    <h1>Receitas Cadastradas</h1>
+    <h1>Usuários cadastrados</h1>
 
-    <input type="text" id="filtro" placeholder="Buscar por nome da receita..." />
-
-    <button id="adicionar-receita" class="botao">Adicionar Receita</button> 
-    <button id="botao-home" class="botao" onclick="funcaoHome()">Home</button>
+    <input type="text" id="filtro" placeholder="Buscar por usuário..." />
 
     <table>
       <thead>
         <tr>
+          <th>Nome</th>
           <th>Email</th>
-          <th>Nome da Receita</th>
           <th>Ações</th>
         </tr>
       </thead>
-      <tbody id="tabela-receitas">
+      <tbody id="tabela-usuarios">
         <!-- Linhas inseridas por JavaScript -->
       </tbody>
     </table>
   </div>
 
-  <script src="../javascript/listagem.js"></script>
+  <script src="../javascript/listagemUsuario.js"></script>
 </body>
 </html>

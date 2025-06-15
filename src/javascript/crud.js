@@ -99,45 +99,14 @@ function telaCadastro(event) {
   document.querySelector("form").reset();
 }
 
-
-function listarUsuarios() {
-  const usuarios = JSON.parse(localStorage.getItem("usuarios") || "[]");
-  const lista = document.getElementById("listaUsuarios");
-
-  if (!lista) return;
-
-  lista.innerHTML = "<h2>Usuários Cadastrados</h2>";
-
-  usuarios.forEach((user, index) => {
-    lista.innerHTML += `
-      <div>
-        <strong>${user.nome}</strong> - ${user.email}
-        <button onclick="editarUsuario(${index})">Editar</button>
-        <button onclick="removerUsuario(${index})">Remover</button>
-      </div>
-      <hr>
-    `;
-  });
-}
-
-
-function editarUsuario(index) {
-  const usuarios = JSON.parse(localStorage.getItem("usuarios") || "[]");
-  const user = usuarios[index];
-
-
-  document.getElementById("nome").value = user.nome;
-  document.getElementById("e-mail").value = user.email;
-  document.getElementById("senha").value = user.senha;
-}
-
-
-function removerUsuario(index) {
-  const usuarios = JSON.parse(localStorage.getItem("usuarios") || "[]");
-  usuarios.splice(index, 1);  
-  localStorage.setItem("usuarios", JSON.stringify(usuarios)); 
-  listarUsuarios(); 
-}
-
-
 document.addEventListener("DOMContentLoaded", listarUsuarios);
+
+const editando = JSON.parse(localStorage.getItem("usuarioEditando"));
+if (editando) {
+  // Atualiza o usuário no índice correto
+  usuarios[editando.index] = { nome, email, senha };
+  localStorage.removeItem("usuarioEditando");
+} else {
+  // Cadastro normal
+  usuarios.push({ nome, email, senha });
+}
