@@ -18,7 +18,7 @@ function salvarlogin(event) {
   }
 
   if (usuarioValido) {
-    // Salva o nome do usuário logado para exibir na Home
+   
     localStorage.setItem('nickname', usuarioValido.nome);
 
     mensagem.style.color = "green";
