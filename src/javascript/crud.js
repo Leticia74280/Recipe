@@ -82,6 +82,9 @@ function telaCadastro(event) {
 
 
   localStorage.setItem("usuarios", JSON.stringify(usuarios));
+  // Salva o nome do usuário recém cadastrado
+  localStorage.setItem('nickname', nome);
+
 
 
   mensagem.style.color = "green";

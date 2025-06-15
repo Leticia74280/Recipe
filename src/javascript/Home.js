@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const usernameDisplay = document.querySelector('.username');
   const bioDisplay = document.querySelector('.bio');
 
-  if (username) usernameDisplay.textContent = username;
+  if (username) usernameDisplay.textContent = `Bem-vindo, ${username}!`;
   if (bio) bioDisplay.textContent = bio;
 });
 
