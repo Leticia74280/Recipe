@@ -19,12 +19,12 @@
       <input type="file" id="profilePicInput" accept="image/*" style="display: none;">
      </div>
       <div class="profile-info">
-        <h1 class="username">Guest</h1>
+        <h1 class="username">Usuário</h1>
         <p class="bio">
          <input id="bio-input" placeholder="Insira sua bio" />
         </p>
         <div class="stats">
-          
+          <div><strong>9</strong> Receitas</div>
           <div><strong><a href="../pages/Home.html">Home</a></strong></div>
           <div><strong><a href="../pages/Perfil.html">Perfil</a></strong></div>
           <div><strong><a href="../pages/listagem.html">Lista de Receitas</a></strong></div>
@@ -34,38 +34,257 @@
       </div>
     </div>
 
-    <div class="grid-three">
-      <div class="form-input-default">
-        <label for="first-name">Nome:</label>
-        <input id="first-name" autocomplete="given-name" name="first_name" placeholder="Insira seu nome" required type="text">
+    <div id="success-message" class="success-message"></div>
+    <div id="error-message" class="error-message"></div>
+
+    <div class="form-section">
+      <h2 class="section-title">Dados Pessoais</h2>
+      <div class="form-grid">
+        <div class="form-input-default">
+          <label for="first-name">Nome:</label>
+          <input id="first-name" autocomplete="given-name" name="first_name" placeholder="Insira seu nome" required type="text">
+        </div>
+        <div class="form-input-default">
+          <label for="last_name">Sobrenome:</label>
+          <input id="last_name" autocomplete="family-name" name="last_name" placeholder="Insira seu sobrenome" required type="text">
+        </div>
+        <div class="form-input-default">
+          <label for="nickname">Nome de Usuário:</label>
+          <input id="nickname" autocomplete="nickname" name="nickname" placeholder="Insira seu nome de usuário" required type="text">
+        </div>
+        <div class="form-input-default">
+          <label for="email">Email:</label>
+          <input id="email" autocomplete="email" name="email" placeholder="Insira seu email" required type="email">
+        </div>
+        <div class="form-input-default">
+          <label for="phone">Telefone:</label>
+          <input id="phone" class="maskPhone" name="phone" placeholder="(__) _____-____" required type="text" maxlength="19">
+        </div>
       </div>
-      <div class="form-input-default">
-        <label for="last_name">Sobrenome:</label>
-        <input id="last_name" autocomplete="family-name" name="last_name" placeholder="Insira seu sobrenome" required type="text">
+    </div>
+
+    <div class="form-section">
+      <h2 class="section-title">Endereço</h2>
+      <div class="form-grid">
+        <div class="form-input-default cep-input">
+          <label for="cep">CEP:</label>
+          <input name="cep" type="text" id="cep" placeholder="00000-000" maxlength="9" required>
+          <span class="cep-loading" id="cep-loading">Buscando...</span>
+        </div>
+        <div class="form-input-default">
+          <label for="rua">Rua:</label>
+          <input name="rua" type="text" id="rua" placeholder="Logradouro" readonly>
+        </div>
+        <div class="form-input-default">
+          <label for="numero">Número:</label>
+          <input name="numero" type="text" id="numero" placeholder="Número da residência" required>
+        </div>
+        <div class="form-input-default">
+          <label for="complemento">Complemento:</label>
+          <input name="complemento" type="text" id="complemento" placeholder="Apto, bloco, etc.">
+        </div>
+        <div class="form-input-default">
+          <label for="bairro">Bairro:</label>
+          <input name="bairro" type="text" id="bairro" placeholder="Bairro" readonly>
+        </div>
+        <div class="form-input-default">
+          <label for="cidade">Cidade:</label>
+          <input name="cidade" type="text" id="cidade" placeholder="Cidade" readonly>
+        </div>
+        <div class="form-input-default">
+          <label for="uf">Estado:</label>
+          <input name="uf" type="text" id="uf" placeholder="UF" readonly>
+        </div>
       </div>
-      <div class="form-input-default">
-        <label for="nickname">Nome de Usuário:</label>
-        <input id="nickname" autocomplete="nickname" name="nickname" placeholder="Insira seu nome de usuário" required type="text">
-      </div>
-      <div class="form-input-default">
-        <label for="email">Email:</label>
-        <input id="email" autocomplete="email" name="email" placeholder="Insira seu email" required type="email">
-      </div>
-    <div class="grid-three phone">
-      <div class="form-input-default">
-        <label for="phone">Telefone:</label>
-        <input id="phone" class="maskPhone" name="phone" placeholder="(__) _____-____" required type="text" maxlength="19">
-      </div>
-      <div class="ajax-message"></div>
-      <div class="button-wrapper">
-        <button ajax-form ajax-loading class="button-default" type="submit">Salvar</button>
-      </div>
+    </div>
+
+    <div class="button-wrapper">
+      <button class="button-default" type="submit" id="save-btn">Salvar Perfil</button>
     </div>
   </div>
 
   <footer class="footer">
     <p>&copy; 2025 Developed by Receitas Deliciosas. Todos os direitos reservados.</p>
   </footer>
-  <script src="../javascript/Perfil.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const editBtn = document.querySelector('.edit-profile-btn');
+      const fileInput = document.getElementById('profilePicInput');
+      const profilePic = document.querySelector('.profile-pic');
+
+      const savedPic = localStorage.getItem('profilePic');
+      if (savedPic) {
+        profilePic.src = savedPic;
+      }
+
+      editBtn.addEventListener('click', () => {
+        fileInput.click();
+      });
+
+      fileInput.addEventListener('change', (e) => {
+        const file = e.target.files[0];
+        if (!file) return;
+
+        const reader = new FileReader();
+        reader.onload = () => {
+          const dataURL = reader.result;
+          profilePic.src = dataURL;
+          localStorage.setItem('profilePic', dataURL);
+        };
+        reader.readAsDataURL(file);
+      });
+    });
+
+    function limpaFormularioCep() {
+      document.getElementById('rua').value = '';
+      document.getElementById('bairro').value = '';
+      document.getElementById('cidade').value = '';
+      document.getElementById('uf').value = '';
+    }
+
+    function meuCallback(conteudo) {
+      const loading = document.getElementById('cep-loading');
+      loading.style.display = 'none';
+
+      if (!("erro" in conteudo)) {
+        document.getElementById('rua').value = conteudo.logradouro;
+        document.getElementById('bairro').value = conteudo.bairro;
+        document.getElementById('cidade').value = conteudo.localidade;
+        document.getElementById('uf').value = conteudo.uf;
+        showMessage('CEP encontrado com sucesso!', 'success');
+      } else {
+        limpaFormularioCep();
+        showMessage('CEP não encontrado.', 'error');
+      }
+    }
+
+    function pesquisaCep(valor) {
+      var cep = valor.replace(/\D/g, '');
+
+      if (cep != "") {
+        var validacep = /^[0-9]{8}$/;
+
+        if (validacep.test(cep)) {
+          const loading = document.getElementById('cep-loading');
+          loading.style.display = 'inline';
+
+          document.getElementById('rua').value = "...";
+          document.getElementById('bairro').value = "...";
+          document.getElementById('cidade').value = "...";
+          document.getElementById('uf').value = "...";
+
+          var script = document.createElement('script');
+          script.src = 'https://viacep.com.br/ws/' + cep + '/json/?callback=meuCallback';
+          document.body.appendChild(script);
+
+          setTimeout(() => {
+            document.body.removeChild(script);
+          }, 5000);
+        } else {
+          limpaFormularioCep();
+          showMessage('Formato de CEP inválido.', 'error');
+        }
+      } else {
+        limpaFormularioCep();
+      }
+    }
+
+    document.getElementById('cep').addEventListener('blur', function() {
+      pesquisaCep(this.value);
+    });
+
+    document.getElementById('cep').addEventListener('input', function() {
+      let value = this.value.replace(/\D/g, '');
+      value = value.replace(/^(\d{5})(\d)/, '$1-$2');
+      this.value = value;
+    });
+
+    document.getElementById('phone').addEventListener('input', function() {
+      let value = this.value.replace(/\D/g, '');
+      value = value.replace(/^(\d{2})(\d)/g, '($1) $2');
+      value = value.replace(/(\d)(\d{4})$/, '$1-$2');
+      this.value = value;
+    });
+
+    function showMessage(message, type) {
+      const successMsg = document.getElementById('success-message');
+      const errorMsg = document.getElementById('error-message');
+      
+      successMsg.style.display = 'none';
+      errorMsg.style.display = 'none';
+      
+      if (type === 'success') {
+        successMsg.textContent = message;
+        successMsg.style.display = 'block';
+      } else {
+        errorMsg.textContent = message;
+        errorMsg.style.display = 'block';
+      }
+      
+      setTimeout(() => {
+        successMsg.style.display = 'none';
+        errorMsg.style.display = 'none';
+      }, 3000);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const fields = {
+        firstName: document.getElementById('first-name'),
+        lastName: document.getElementById('last_name'),
+        nickname: document.getElementById('nickname'),
+        email: document.getElementById('email'),
+        phone: document.getElementById('phone'),
+        bio: document.getElementById('bio-input'),
+        cep: document.getElementById('cep'),
+        rua: document.getElementById('rua'),
+        numero: document.getElementById('numero'),
+        complemento: document.getElementById('complemento'),
+        bairro: document.getElementById('bairro'),
+        cidade: document.getElementById('cidade'),
+        uf: document.getElementById('uf')
+      };
+
+      const usernameDisplay = document.querySelector('.username');
+
+      for (let key in fields) {
+        const saved = localStorage.getItem(key);
+        if (saved) fields[key].value = saved;
+      }
+
+      if (localStorage.getItem('nickname')) {
+        usernameDisplay.textContent = localStorage.getItem('nickname');
+      }
+
+      const saveBtn = document.getElementById('save-btn');
+      saveBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        const requiredFields = ['firstName', 'lastName', 'nickname', 'email', 'phone', 'cep', 'numero'];
+        let isValid = true;
+
+        for (let field of requiredFields) {
+          if (!fields[field].value.trim()) {
+            isValid = false;
+            fields[field].style.borderColor = '#dc3545';
+          } else {
+            fields[field].style.borderColor = '#e0e0e0';
+          }
+        }
+
+        if (!isValid) {
+          showMessage('Por favor, preencha todos os campos obrigatórios.', 'error');
+          return;
+        }
+
+        for (let key in fields) {
+          localStorage.setItem(key, fields[key].value);
+        }
+
+        usernameDisplay.textContent = fields.nickname.value;
+        showMessage('Perfil salvo com sucesso!', 'success');
+      });
+    });
+  </script>
 </body>
 </html>
