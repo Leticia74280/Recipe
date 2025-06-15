@@ -7,7 +7,7 @@ let receitas = JSON.parse(localStorage.getItem("receitas")) || [];
 function salvarNoLocalStorage() {
   localStorage.setItem("receitas", JSON.stringify(receitas));
 }
-
+//nome da receita fica clicavel e manda o usuario para a home //
 function renderTabela(lista) {
   tabela.innerHTML = "";
 
@@ -21,7 +21,7 @@ function renderTabela(lista) {
 
     tr.innerHTML = `
       <td>${receita.id}</td>
-      <td>${receita.nome}</td>
+      <td><a href="../pages/Home.html">${receita.nome}</a></td>
       <td>
         <button class="editar" onclick="editar(${index})">Editar</button>
         <button class="excluir" onclick="excluir(${index})">Excluir</button>
@@ -32,6 +32,7 @@ function renderTabela(lista) {
   });
 }
 
+
 function editar(index) {
   const novaReceita = prompt("Editar nome da receita:", receitas[index].nome);
   if (novaReceita && novaReceita.trim() !== "") {
@@ -40,7 +41,7 @@ function editar(index) {
     aplicarFiltro();
   }
 }
-
+//exclui a receita//
 function excluir(index) {
   if (confirm("Deseja excluir esta receita?")) {
     receitas.splice(index, 1);
