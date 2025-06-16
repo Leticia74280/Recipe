@@ -2,8 +2,10 @@ const tabela = document.getElementById("tabela-receitas");
 const filtro = document.getElementById("filtro");
 const btnAdicionar = document.getElementById("adicionar-receita");
 
+//Carrega as receitas salvas no navegador//
 let receitas = JSON.parse(localStorage.getItem("receitas")) || [];
 
+//Salva o array de receitas no localStorage como texto JSON//
 function salvarNoLocalStorage() {
   localStorage.setItem("receitas", JSON.stringify(receitas));
 }
@@ -49,13 +51,13 @@ function excluir(index) {
     aplicarFiltro();
   }
 }
-
+//Filtra as receitas conforme o texto digitado no campo de busca//
 function aplicarFiltro() {
   const termo = filtro.value.toLowerCase();
   const receitasFiltradas = receitas.filter(r => r.nome.toLowerCase().includes(termo));
   renderTabela(receitasFiltradas);
 }
-
+//Abre um prompt para digitar o nome da nova receita//
 function adicionarReceita() {
   const nome = prompt("Nova receita:");
   if (nome && nome.trim() !== "") {
@@ -69,12 +71,12 @@ function adicionarReceita() {
     aplicarFiltro();
   }
 }
-
+//exibe receitas ao carregar a pagina//
 filtro.addEventListener("input", aplicarFiltro);
 btnAdicionar.addEventListener("click", adicionarReceita);
 
 aplicarFiltro();
-
+//Redireciona o usuário manualmente para a página Home//
 function funcaoHome() {
    window.location.href = "../pages/Home.html";
 }
