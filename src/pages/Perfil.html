@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
+<head>                      <!--Tag head com ícone shortcut e link do CSS-->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Perfil</title>
   <link rel="shortcut icon" href="../images/Logo-Site_de_Receitas.png" type="image/x-icon">
   <link rel="stylesheet" href="../styles/Perfil.css" />
 </head>
-
-<body>  
+<!--Começo da página de perfil-->
+<body>                      <!--Imagem e nome de usuário-->
   <div class="profile-container">
     <div class="profile-header">
      <div class="profile-pic-wrapper">
@@ -23,7 +23,7 @@
         <p class="bio">
          <input id="bio-input" placeholder="Insira sua bio" />
         </p>
-        <div class="stats">
+        <div class="stats">    <!--Botões que direcionam para as outras páginas-->
           <div><strong>9</strong> Receitas</div>
           <div><strong><a href="../pages/Home.html">Home</a></strong></div>
           <div><strong><a href="../pages/Perfil.html">Perfil</a></strong></div>
@@ -37,7 +37,7 @@
     <div id="success-message" class="success-message"></div>
     <div id="error-message" class="error-message"></div>
 
-    <div class="form-section">
+    <div class="form-section">     <!--Dados Pessoais do usuário-->
       <h2 class="section-title">Dados Pessoais</h2>
       <div class="form-grid">
         <div class="form-input-default">
@@ -62,7 +62,7 @@
         </div>
       </div>
     </div>
-
+                <!--Endereço do usuário-->
     <div class="form-section">
       <h2 class="section-title">Endereço</h2>
       <div class="form-grid">
@@ -97,16 +97,16 @@
         </div>
       </div>
     </div>
-
+                <!--Botão para salvar os dados-->
     <div class="button-wrapper">
       <button class="button-default" type="submit" id="save-btn">Salvar Perfil</button>
     </div>
   </div>
-
+                          <!--Rodapé da página de perfil-->
   <footer class="footer">
     <p>&copy; 2025 Developed by Receitas Deliciosas. Todos os direitos reservados.</p>
   </footer>
-
+            <!--Javascript dos dados pessoais e endereço da página de perfil-->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const editBtn = document.querySelector('.edit-profile-btn');
@@ -287,4 +287,4 @@
     });
   </script>
 </body>
-</html>
+</html>      <!--Fim da página de perfil-->
