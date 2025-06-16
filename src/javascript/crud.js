@@ -1,3 +1,4 @@
+//opção de ver senha
 function togglePassword() {
     var passwordField = document.getElementById("senha");
     var eyeIcon = document.getElementById("eye-icon");
@@ -13,13 +14,15 @@ function togglePassword() {
         eyeIcon.classList.add("fa-eye"); 
     }
 }
+//fim 
 
+//verificação de email valido
 function validarEmail(email) {
   const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return regex.test(email);
 }
 
-
+//ferificação de senha forte
 function senhaForte(senha) {
   const tem8Caracteres = senha.length >= 8;
   const temMaiuscula = /[A-Z]/.test(senha);
@@ -29,9 +32,11 @@ function senhaForte(senha) {
   return tem8Caracteres && temMaiuscula && temMinuscula && temSimbolo;
 }
 
+
 function telaCadastro(event) {
   event.preventDefault();
 
+  //coleta os dados 
   const nome = document.getElementById("nome").value.trim();
   const email = document.getElementById("e-mail").value.trim(); 
   const senha = document.getElementById("senha").value;
@@ -68,7 +73,7 @@ function telaCadastro(event) {
     return;
   }
 
-
+//parte do local storage
   const usuarios = JSON.parse(localStorage.getItem("usuarios") || "[]");
   const indice = usuarios.findIndex(u => u.email === email);
 
